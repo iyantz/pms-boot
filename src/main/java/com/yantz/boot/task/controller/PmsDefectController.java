@@ -1,22 +1,20 @@
 package com.yantz.boot.task.controller;
 
-import com.yantz.boot.task.service.PmsDefectService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import com.yantz.boot.task.model.form.PmsDefectForm;
-import com.yantz.boot.task.model.query.PmsDefectQuery;
-import com.yantz.boot.task.model.vo.PmsDefectVO;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.yantz.boot.common.result.PageResult;
 import com.yantz.boot.common.result.Result;
+import com.yantz.boot.task.model.form.PmsDefectForm;
+import com.yantz.boot.task.model.query.PmsDefectQuery;
+import com.yantz.boot.task.model.vo.PmsDefectVO;
+import com.yantz.boot.task.service.PmsDefectService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.Operation;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import jakarta.validation.Valid;
 
 /**
  * 缺陷管理前端控制层
@@ -24,7 +22,7 @@ import jakarta.validation.Valid;
  * @author yantz
  * @since 2025-03-02 13:31
  */
-@Tag(name = "缺陷管理接口")
+@Tag(name = "18.缺陷管理接口")
 @RestController
 @RequestMapping("/api/v1/pmsDefects")
 @RequiredArgsConstructor

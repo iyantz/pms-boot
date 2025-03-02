@@ -26,6 +26,10 @@ spring:
           max-idle: 8
           # 连接池中的最小空闲连接 默认0
           min-idle: 0
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    serialization:
+      write-dates-as-timestamps: false
   cache:
     enabled: false
     # 缓存类型 redis、none(不使用缓存)
@@ -144,6 +148,10 @@ springdoc:
         - com.yantz.boot.shared.auth.controller
         - com.yantz.boot.shared.file.controller
         - com.yantz.boot.shared.codegen.controller
+        - com.yantz.boot.project.controller
+        - com.yantz.boot.report.controller
+        - com.yantz.boot.task.controller
+        - com.yantz.boot.workorder.controller
   default-flat-param-object: true
 
 # knife4j 接口文档配置

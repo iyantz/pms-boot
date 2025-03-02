@@ -35,7 +35,7 @@ public class GenConfigForm {
     @Schema(description = "实体名",example = "User")
     private String entityName;
 
-    @Schema(description = "作者",example = "yantztech")
+    @Schema(description = "作者", example = "yantz")
     private String author;
 
     @Schema(description = "上级菜单ID",example = "1")

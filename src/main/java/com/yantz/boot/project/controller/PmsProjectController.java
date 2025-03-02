@@ -1,22 +1,20 @@
 package com.yantz.boot.project.controller;
 
-import com.yantz.boot.project.service.PmsProjectService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import com.yantz.boot.project.model.form.PmsProjectForm;
-import com.yantz.boot.project.model.query.PmsProjectQuery;
-import com.yantz.boot.project.model.vo.PmsProjectVO;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.yantz.boot.common.result.PageResult;
 import com.yantz.boot.common.result.Result;
+import com.yantz.boot.project.model.form.PmsProjectForm;
+import com.yantz.boot.project.model.query.PmsProjectQuery;
+import com.yantz.boot.project.model.vo.PmsProjectVO;
+import com.yantz.boot.project.service.PmsProjectService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.Operation;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import jakarta.validation.Valid;
 
 /**
  * 项目信息前端控制层
@@ -24,7 +22,7 @@ import jakarta.validation.Valid;
  * @author yantz
  * @since 2025-03-02 14:04
  */
-@Tag(name = "项目信息接口")
+@Tag(name = "14.项目信息接口")
 @RestController
 @RequestMapping("/api/v1/pmsProjects")
 @RequiredArgsConstructor

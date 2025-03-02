@@ -2,13 +2,13 @@ package com.yantz.boot.system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.yantz.boot.system.model.bo.UserBO;
-import com.yantz.boot.system.model.entity.User;
-import com.yantz.boot.system.model.query.UserPageQuery;
-import com.yantz.boot.system.model.form.UserForm;
 import com.yantz.boot.common.annotation.DataPermission;
+import com.yantz.boot.system.model.bo.UserBO;
 import com.yantz.boot.system.model.dto.UserAuthInfo;
 import com.yantz.boot.system.model.dto.UserExportDTO;
+import com.yantz.boot.system.model.entity.User;
+import com.yantz.boot.system.model.form.UserForm;
+import com.yantz.boot.system.model.query.UserPageQuery;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

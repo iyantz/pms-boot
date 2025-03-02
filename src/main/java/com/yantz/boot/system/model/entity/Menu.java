@@ -1,7 +1,6 @@
 package com.yantz.boot.system.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
-
 import com.yantz.boot.system.enums.MenuTypeEnum;
 import lombok.Getter;
 import lombok.Setter;

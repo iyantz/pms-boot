@@ -1,10 +1,14 @@
 package com.yantz.boot.release.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.yantz.boot.common.base.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
+
 import java.time.LocalDateTime;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.yantz.boot.common.base.BaseEntity;
 
 /**
  * 发布计划实体对象
@@ -22,6 +26,7 @@ public class PmsReleasePlan extends BaseEntity {
     /**
      * 计划ID
      */
+    @TableId(value = "plan_id", type = IdType.AUTO)
     private Long planId;
     /**
      * 项目ID
@@ -38,6 +43,7 @@ public class PmsReleasePlan extends BaseEntity {
     /**
      * 计划时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime planTime;
     /**
      * 描述

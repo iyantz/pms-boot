@@ -2,8 +2,8 @@ package com.yantz.boot.system.converter;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yantz.boot.system.model.entity.Config;
-import com.yantz.boot.system.model.vo.ConfigVO;
 import com.yantz.boot.system.model.form.ConfigForm;
+import com.yantz.boot.system.model.vo.ConfigVO;
 import org.mapstruct.Mapper;
 
 /**

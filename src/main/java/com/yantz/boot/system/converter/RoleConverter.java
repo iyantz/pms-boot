@@ -1,10 +1,10 @@
 package com.yantz.boot.system.converter;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.yantz.boot.system.model.entity.Role;
-import com.yantz.boot.system.model.vo.RolePageVO;
 import com.yantz.boot.common.model.Option;
+import com.yantz.boot.system.model.entity.Role;
 import com.yantz.boot.system.model.form.RoleForm;
+import com.yantz.boot.system.model.vo.RolePageVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.Mappings;

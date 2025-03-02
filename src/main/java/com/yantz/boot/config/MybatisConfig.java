@@ -7,6 +7,7 @@ import com.baomidou.mybatisplus.extension.plugins.inner.DataPermissionIntercepto
 import com.baomidou.mybatisplus.extension.plugins.inner.PaginationInnerInterceptor;
 import com.yantz.boot.core.handler.MyDataPermissionHandler;
 import com.yantz.boot.core.handler.MyMetaObjectHandler;
+import com.yantz.boot.system.service.UserService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -39,9 +40,9 @@ public class MybatisConfig {
      * 自动填充数据库创建人、创建时间、更新人、更新时间
      */
     @Bean
-    public GlobalConfig globalConfig() {
+    public GlobalConfig globalConfig(UserService userService) {
         GlobalConfig globalConfig = new GlobalConfig();
-        globalConfig.setMetaObjectHandler(new MyMetaObjectHandler());
+        globalConfig.setMetaObjectHandler(new MyMetaObjectHandler(userService));
         return globalConfig;
     }
 

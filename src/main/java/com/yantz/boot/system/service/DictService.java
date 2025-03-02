@@ -2,7 +2,6 @@ package com.yantz.boot.system.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.yantz.boot.common.model.Option;
 import com.yantz.boot.system.model.entity.Dict;
 import com.yantz.boot.system.model.form.DictForm;
 import com.yantz.boot.system.model.query.DictPageQuery;

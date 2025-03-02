@@ -1,12 +1,15 @@
 package com.yantz.boot.release.model.form;
 
-import java.io.Serial;
-import java.io.Serializable;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
+import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+
+import java.io.Serial;
+import java.io.Serializable;
 import java.time.LocalDateTime;
-import jakarta.validation.constraints.*;
 
 /**
  * 发布内容表单对象
@@ -43,12 +46,14 @@ public class PmsReleaseContentForm implements Serializable {
 
     @Schema(description = "创建时间")
     @NotNull(message = "创建时间不能为空")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
 
     @Schema(description = "更新人ID")
     private Long updateBy;
 
     @Schema(description = "更新时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updateTime;
 
     @Schema(description = "是否删除（0: 未删除, 1: 已删除）")

@@ -1,22 +1,20 @@
 package com.yantz.boot.release.controller;
 
-import com.yantz.boot.release.service.PmsReleaseContentService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import com.yantz.boot.release.model.form.PmsReleaseContentForm;
-import com.yantz.boot.release.model.query.PmsReleaseContentQuery;
-import com.yantz.boot.release.model.vo.PmsReleaseContentVO;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.yantz.boot.common.result.PageResult;
 import com.yantz.boot.common.result.Result;
+import com.yantz.boot.release.model.form.PmsReleaseContentForm;
+import com.yantz.boot.release.model.query.PmsReleaseContentQuery;
+import com.yantz.boot.release.model.vo.PmsReleaseContentVO;
+import com.yantz.boot.release.service.PmsReleaseContentService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.Operation;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import jakarta.validation.Valid;
 
 /**
  * 发布内容前端控制层
@@ -24,7 +22,7 @@ import jakarta.validation.Valid;
  * @author yantz
  * @since 2025-03-02 13:47
  */
-@Tag(name = "发布内容接口")
+@Tag(name = "22.发布内容接口")
 @RestController
 @RequestMapping("/api/v1/pmsReleaseContents")
 @RequiredArgsConstructor

@@ -1,13 +1,12 @@
 package com.yantz.boot.system.mapper;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.yantz.boot.system.model.bo.VisitCount;
 import com.yantz.boot.system.model.bo.VisitStatsBO;
 import com.yantz.boot.system.model.entity.Log;
 import com.yantz.boot.system.model.query.LogPageQuery;
 import com.yantz.boot.system.model.vo.LogPageVO;
-import com.yantz.boot.system.model.vo.VisitStatsVO;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

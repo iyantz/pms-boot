@@ -1,8 +1,8 @@
 package com.yantz.boot.system.converter;
 
 import com.yantz.boot.system.model.entity.Menu;
-import com.yantz.boot.system.model.vo.MenuVO;
 import com.yantz.boot.system.model.form.MenuForm;
+import com.yantz.boot.system.model.vo.MenuVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 

@@ -1,19 +1,19 @@
 package com.yantz.boot.system.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.yantz.boot.common.annotation.Log;
+import com.yantz.boot.common.annotation.RepeatSubmit;
+import com.yantz.boot.common.enums.LogModuleEnum;
 import com.yantz.boot.common.result.PageResult;
 import com.yantz.boot.common.result.Result;
-import com.yantz.boot.common.enums.LogModuleEnum;
+import com.yantz.boot.system.model.form.DictForm;
 import com.yantz.boot.system.model.query.DictPageQuery;
 import com.yantz.boot.system.model.vo.DictPageVO;
-import com.yantz.boot.common.annotation.RepeatSubmit;
-import com.yantz.boot.system.model.form.DictForm;
-import com.yantz.boot.common.annotation.Log;
 import com.yantz.boot.system.model.vo.DictVO;
 import com.yantz.boot.system.service.DictService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;

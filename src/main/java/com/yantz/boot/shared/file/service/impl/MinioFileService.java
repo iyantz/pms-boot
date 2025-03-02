@@ -7,8 +7,8 @@ import cn.hutool.core.util.IdUtil;
 import cn.hutool.core.util.StrUtil;
 import com.yantz.boot.common.exception.BusinessException;
 import com.yantz.boot.common.result.ResultCode;
-import com.yantz.boot.shared.file.service.FileService;
 import com.yantz.boot.shared.file.model.FileInfo;
+import com.yantz.boot.shared.file.service.FileService;
 import io.minio.*;
 import io.minio.http.Method;
 import jakarta.annotation.PostConstruct;
@@ -21,7 +21,6 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.io.File;
 import java.io.InputStream;
 import java.time.LocalDateTime;
 

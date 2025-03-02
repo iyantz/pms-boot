@@ -1,15 +1,14 @@
 package com.yantz.boot.system.controller;
 
-import com.yantz.boot.common.result.Result;
-import com.yantz.boot.common.enums.LogModuleEnum;
+import com.yantz.boot.common.annotation.Log;
 import com.yantz.boot.common.annotation.RepeatSubmit;
+import com.yantz.boot.common.enums.LogModuleEnum;
+import com.yantz.boot.common.model.Option;
+import com.yantz.boot.common.result.Result;
 import com.yantz.boot.system.model.form.MenuForm;
 import com.yantz.boot.system.model.query.MenuQuery;
 import com.yantz.boot.system.model.vo.MenuVO;
-import com.yantz.boot.common.model.Option;
 import com.yantz.boot.system.model.vo.RouteVO;
-import com.yantz.boot.common.annotation.Log;
-import com.yantz.boot.core.security.util.SecurityUtils;
 import com.yantz.boot.system.service.MenuService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -20,7 +19,6 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * 菜单控制层

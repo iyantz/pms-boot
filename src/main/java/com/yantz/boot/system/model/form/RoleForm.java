@@ -1,10 +1,8 @@
 package com.yantz.boot.system.model.form;
 
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.Data;
-
-// import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotBlank;
+import lombok.Data;
 import org.hibernate.validator.constraints.Range;
 
 @Schema(description = "角色表单对象")

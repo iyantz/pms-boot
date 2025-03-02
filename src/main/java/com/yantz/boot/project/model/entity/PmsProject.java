@@ -1,11 +1,13 @@
 package com.yantz.boot.project.model.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-import java.time.LocalDateTime;
-import java.math.BigDecimal;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.yantz.boot.common.base.BaseEntity;
+import lombok.Getter;
+import lombok.Setter;
+
+import java.math.BigDecimal;
 
 /**
  * 项目信息实体对象
@@ -22,7 +24,9 @@ public class PmsProject extends BaseEntity {
 
     /**
      * 项目ID
+     * 默认为数据库自行生成的ID
      */
+    @TableId(value = "project_id", type = IdType.AUTO)
     private Long projectId;
     /**
      * 项目名称

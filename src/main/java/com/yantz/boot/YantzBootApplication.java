@@ -10,7 +10,7 @@ import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
  * @author Ray.Hao
  * @since 0.0.1
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.yantz.boot")
 @ConfigurationPropertiesScan // 开启配置属性绑定
 public class YantzBootApplication {
 

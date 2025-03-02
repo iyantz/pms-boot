@@ -1,8 +1,8 @@
 package com.yantz.boot.system.model.query;
 
 import cn.hutool.db.sql.Direction;
-import com.yantz.boot.common.base.BasePageQuery;
 import com.yantz.boot.common.annotation.ValidField;
+import com.yantz.boot.common.base.BasePageQuery;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import lombok.EqualsAndHashCode;

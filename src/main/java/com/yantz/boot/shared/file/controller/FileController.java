@@ -1,13 +1,13 @@
 package com.yantz.boot.shared.file.controller;
 
 import com.yantz.boot.common.result.Result;
-import com.yantz.boot.shared.file.service.FileService;
 import com.yantz.boot.shared.file.model.FileInfo;
+import com.yantz.boot.shared.file.service.FileService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.enums.ParameterIn;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
 import lombok.SneakyThrows;
 import org.springframework.web.bind.annotation.*;

@@ -8,10 +8,9 @@ import com.yantz.boot.core.security.exception.MyAccessDeniedHandler;
 import com.yantz.boot.core.security.exception.MyAuthenticationEntryPoint;
 import com.yantz.boot.core.security.filter.CaptchaValidationFilter;
 import com.yantz.boot.core.security.filter.JwtAuthenticationFilter;
-import com.yantz.boot.core.security.service.SysUserDetailsService;
 import com.yantz.boot.core.security.manager.JwtTokenManager;
+import com.yantz.boot.core.security.service.SysUserDetailsService;
 import com.yantz.boot.system.service.ConfigService;
-import com.yantz.boot.system.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -46,7 +45,6 @@ public class SecurityConfig {
     private final PasswordEncoder passwordEncoder;
 
     private final JwtTokenManager jwtTokenService;
-    private final UserService userService;
     private final SysUserDetailsService userDetailsService;
 
     private final CodeGenerator codeGenerator;

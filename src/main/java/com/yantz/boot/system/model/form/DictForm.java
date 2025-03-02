@@ -3,11 +3,7 @@ package com.yantz.boot.system.model.form;
 
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.validator.constraints.Range;
-
-import java.util.List;
 
 /**
  * 字典表单对象

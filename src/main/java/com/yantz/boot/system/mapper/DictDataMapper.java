@@ -2,7 +2,6 @@ package com.yantz.boot.system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.yantz.boot.common.model.Option;
 import com.yantz.boot.system.model.entity.DictData;
 import com.yantz.boot.system.model.query.DictDataPageQuery;
 import com.yantz.boot.system.model.vo.DictDataPageVO;

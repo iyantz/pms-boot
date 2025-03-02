@@ -1,24 +1,22 @@
 package com.yantz.boot.workorder.service.impl;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import cn.hutool.core.lang.Assert;
+import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.yantz.boot.workorder.converter.PmsWorkOrderConverter;
 import com.yantz.boot.workorder.mapper.PmsWorkOrderMapper;
-import com.yantz.boot.workorder.service.PmsWorkOrderService;
 import com.yantz.boot.workorder.model.entity.PmsWorkOrder;
 import com.yantz.boot.workorder.model.form.PmsWorkOrderForm;
 import com.yantz.boot.workorder.model.query.PmsWorkOrderQuery;
 import com.yantz.boot.workorder.model.vo.PmsWorkOrderVO;
-import com.yantz.boot.workorder.converter.PmsWorkOrderConverter;
+import com.yantz.boot.workorder.service.PmsWorkOrderService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import cn.hutool.core.lang.Assert;
-import cn.hutool.core.util.StrUtil;
 
 /**
  * 工单列表服务实现类

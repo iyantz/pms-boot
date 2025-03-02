@@ -1,11 +1,11 @@
 package com.yantz.boot.shared.auth.controller;
 
+import com.yantz.boot.common.annotation.Log;
 import com.yantz.boot.common.enums.LogModuleEnum;
 import com.yantz.boot.common.result.Result;
-import com.yantz.boot.shared.auth.service.AuthService;
-import com.yantz.boot.shared.auth.model.CaptchaInfo;
 import com.yantz.boot.core.security.model.AuthenticationToken;
-import com.yantz.boot.common.annotation.Log;
+import com.yantz.boot.shared.auth.model.CaptchaInfo;
+import com.yantz.boot.shared.auth.service.AuthService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;

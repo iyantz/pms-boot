@@ -2,13 +2,10 @@ package com.yantz.boot.core.security.exception;
 
 import com.yantz.boot.common.result.ResultCode;
 import com.yantz.boot.common.util.ResponseUtils;
-import org.springframework.security.access.AccessDeniedException;
-import org.springframework.security.web.access.AccessDeniedHandler;
-import org.springframework.stereotype.Component;
-
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import java.io.IOException;
+import org.springframework.security.access.AccessDeniedException;
+import org.springframework.security.web.access.AccessDeniedHandler;
 
 /**
  * 无权限访问处理器

@@ -9,7 +9,6 @@ import com.yantz.boot.system.mapper.DictDataMapper;
 import com.yantz.boot.system.model.entity.DictData;
 import com.yantz.boot.system.model.form.DictDataForm;
 import com.yantz.boot.system.model.query.DictDataPageQuery;
-import com.yantz.boot.system.model.query.DictPageQuery;
 import com.yantz.boot.system.model.vo.DictDataPageVO;
 import com.yantz.boot.system.service.DictDataService;
 import lombok.RequiredArgsConstructor;

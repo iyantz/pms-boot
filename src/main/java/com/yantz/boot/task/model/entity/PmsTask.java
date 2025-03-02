@@ -1,10 +1,14 @@
 package com.yantz.boot.task.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.yantz.boot.common.base.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
+
 import java.time.LocalDateTime;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.yantz.boot.common.base.BaseEntity;
 
 /**
  * 任务列表实体对象
@@ -22,6 +26,7 @@ public class PmsTask extends BaseEntity {
     /**
      * 任务ID
      */
+    @TableId(value = "task_id", type = IdType.AUTO)
     private Long taskId;
     /**
      * 需求ID
@@ -38,10 +43,12 @@ public class PmsTask extends BaseEntity {
     /**
      * 预计开始时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime expectStartTime;
     /**
      * 预计完成时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime expectFinishTime;
     /**
      * 完成状态
@@ -50,10 +57,12 @@ public class PmsTask extends BaseEntity {
     /**
      * 实际开始时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime actualStartTime;
     /**
      * 实际完成时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime actualFinishTime;
     /**
      * 描述

@@ -5,10 +5,8 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.yantz.boot.system.model.entity.UserNotice;
 import com.yantz.boot.system.model.query.NoticePageQuery;
-import com.yantz.boot.system.model.vo.UserNoticePageVO;
 import com.yantz.boot.system.model.vo.NoticePageVO;
-
-import java.util.List;
+import com.yantz.boot.system.model.vo.UserNoticePageVO;
 
 /**
  * 用户公告状态服务类

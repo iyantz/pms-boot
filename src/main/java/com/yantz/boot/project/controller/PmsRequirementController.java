@@ -1,22 +1,20 @@
 package com.yantz.boot.project.controller;
 
-import com.yantz.boot.project.service.PmsRequirementService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import com.yantz.boot.project.model.form.PmsRequirementForm;
-import com.yantz.boot.project.model.query.PmsRequirementQuery;
-import com.yantz.boot.project.model.vo.PmsRequirementVO;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.yantz.boot.common.result.PageResult;
 import com.yantz.boot.common.result.Result;
+import com.yantz.boot.project.model.form.PmsRequirementForm;
+import com.yantz.boot.project.model.query.PmsRequirementQuery;
+import com.yantz.boot.project.model.vo.PmsRequirementVO;
+import com.yantz.boot.project.service.PmsRequirementService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.Operation;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import jakarta.validation.Valid;
 
 /**
  * 需求信息前端控制层
@@ -24,7 +22,7 @@ import jakarta.validation.Valid;
  * @author yantz
  * @since 2025-03-02 13:22
  */
-@Tag(name = "需求信息接口")
+@Tag(name = "16.需求信息接口")
 @RestController
 @RequestMapping("/api/v1/pmsRequirements")
 @RequiredArgsConstructor

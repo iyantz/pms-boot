@@ -1,22 +1,20 @@
 package com.yantz.boot.task.controller;
 
-import com.yantz.boot.task.service.PmsTaskService;
-import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-import com.yantz.boot.task.model.form.PmsTaskForm;
-import com.yantz.boot.task.model.query.PmsTaskQuery;
-import com.yantz.boot.task.model.vo.PmsTaskVO;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.yantz.boot.common.result.PageResult;
 import com.yantz.boot.common.result.Result;
+import com.yantz.boot.task.model.form.PmsTaskForm;
+import com.yantz.boot.task.model.query.PmsTaskQuery;
+import com.yantz.boot.task.model.vo.PmsTaskVO;
+import com.yantz.boot.task.service.PmsTaskService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.Operation;
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
-import jakarta.validation.Valid;
 
 /**
  * 任务列表前端控制层
@@ -24,7 +22,7 @@ import jakarta.validation.Valid;
  * @author yantz
  * @since 2025-03-02 13:34
  */
-@Tag(name = "任务列表接口")
+@Tag(name = "17.任务列表接口")
 @RestController
 @RequestMapping("/api/v1/pmsTasks")
 @RequiredArgsConstructor

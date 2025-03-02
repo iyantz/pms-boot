@@ -1,16 +1,16 @@
 package com.yantz.boot.shared.codegen.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.yantz.boot.common.annotation.Log;
+import com.yantz.boot.common.enums.LogModuleEnum;
 import com.yantz.boot.common.result.PageResult;
 import com.yantz.boot.common.result.Result;
 import com.yantz.boot.config.property.CodegenProperties;
-import com.yantz.boot.common.enums.LogModuleEnum;
-import com.yantz.boot.shared.codegen.service.CodegenService;
 import com.yantz.boot.shared.codegen.model.form.GenConfigForm;
 import com.yantz.boot.shared.codegen.model.query.TablePageQuery;
 import com.yantz.boot.shared.codegen.model.vo.CodegenPreviewVO;
 import com.yantz.boot.shared.codegen.model.vo.TablePageVO;
-import com.yantz.boot.common.annotation.Log;
+import com.yantz.boot.shared.codegen.service.CodegenService;
 import com.yantz.boot.shared.codegen.service.GenConfigService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;

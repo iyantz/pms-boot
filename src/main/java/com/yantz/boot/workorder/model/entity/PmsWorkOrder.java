@@ -1,10 +1,14 @@
 package com.yantz.boot.workorder.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.yantz.boot.common.base.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
+
 import java.time.LocalDateTime;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.yantz.boot.common.base.BaseEntity;
 
 /**
  * 工单列表实体对象
@@ -22,6 +26,7 @@ public class PmsWorkOrder extends BaseEntity {
     /**
      * 工单ID
      */
+    @TableId(value = "work_order_id", type = IdType.AUTO)
     private Long workOrderId;
     /**
      * 项目ID
@@ -46,6 +51,7 @@ public class PmsWorkOrder extends BaseEntity {
     /**
      * 处理时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime handlerTime;
     /**
      * 优先级（1低 2中 3高）

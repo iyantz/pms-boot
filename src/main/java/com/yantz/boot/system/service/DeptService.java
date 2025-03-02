@@ -1,8 +1,8 @@
 package com.yantz.boot.system.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.yantz.boot.system.model.entity.Dept;
 import com.yantz.boot.common.model.Option;
+import com.yantz.boot.system.model.entity.Dept;
 import com.yantz.boot.system.model.form.DeptForm;
 import com.yantz.boot.system.model.query.DeptQuery;
 import com.yantz.boot.system.model.vo.DeptVO;

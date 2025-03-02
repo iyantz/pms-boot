@@ -2,10 +2,10 @@ package com.yantz.boot.system.service.impl;
 
 import cn.hutool.core.collection.CollectionUtil;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.yantz.boot.common.constant.SecurityConstants;
 import com.yantz.boot.system.mapper.RoleMenuMapper;
 import com.yantz.boot.system.model.bo.RolePermsBO;
 import com.yantz.boot.system.model.entity.RoleMenu;
-import com.yantz.boot.common.constant.SecurityConstants;
 import com.yantz.boot.system.service.RoleMenuService;
 import jakarta.annotation.PostConstruct;
 import lombok.RequiredArgsConstructor;

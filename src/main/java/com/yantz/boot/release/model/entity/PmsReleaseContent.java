@@ -1,10 +1,11 @@
 package com.yantz.boot.release.model.entity;
 
-import lombok.Getter;
-import lombok.Setter;
-import java.time.LocalDateTime;
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.yantz.boot.common.base.BaseEntity;
+import lombok.Getter;
+import lombok.Setter;
 
 /**
  * 发布内容实体对象
@@ -22,6 +23,7 @@ public class PmsReleaseContent extends BaseEntity {
     /**
      * 内容ID
      */
+    @TableId(value = "content_id", type = IdType.AUTO)
     private Long contentId;
     /**
      * 发布ID

@@ -55,7 +55,7 @@ public class OpenApiConfig {
                         )
                         .contact(new Contact()
                                 .name("yantz")
-                                .email("yantztech@163.com")
+                                .email("cn_yantz@163.com")
                                 .url("https://xxxxxxh.com")
                         )
                 )

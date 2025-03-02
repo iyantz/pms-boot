@@ -1,11 +1,10 @@
 package com.yantz.boot.system.converter;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.yantz.boot.common.model.Option;
 import com.yantz.boot.system.model.entity.DictData;
 import com.yantz.boot.system.model.form.DictDataForm;
 import com.yantz.boot.system.model.vo.DictPageVO;
-import com.yantz.boot.common.model.Option;
-import com.yantz.boot.system.model.form.DictForm;
 import org.mapstruct.Mapper;
 
 import java.util.List;

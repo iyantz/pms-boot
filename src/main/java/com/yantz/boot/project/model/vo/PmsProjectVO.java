@@ -1,13 +1,14 @@
 package com.yantz.boot.project.model.vo;
 
-import java.io.Serial;
-import java.io.Serializable;
-import java.time.LocalDateTime;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.Setter;
-import java.time.LocalDateTime;
+
+import java.io.Serial;
+import java.io.Serializable;
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 
 /**
  * 项目信息视图对象
@@ -44,10 +45,12 @@ public class PmsProjectVO implements Serializable {
     @Schema(description = "创建人ID")
     private Long createBy;
     @Schema(description = "创建时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime createTime;
     @Schema(description = "更新人ID")
     private Long updateBy;
     @Schema(description = "更新时间")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime updateTime;
     @Schema(description = "是否删除（0: 未删除, 1: 已删除）")
     private Integer isDeleted;

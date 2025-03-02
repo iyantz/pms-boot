@@ -1,7 +1,7 @@
 package com.yantz.boot.shared.auth.service;
 
-import com.yantz.boot.shared.auth.model.CaptchaInfo;
 import com.yantz.boot.core.security.model.AuthenticationToken;
+import com.yantz.boot.shared.auth.model.CaptchaInfo;
 
 /**
  * 认证服务接口

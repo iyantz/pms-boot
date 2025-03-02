@@ -1,22 +1,22 @@
 package com.yantz.boot.system.controller;
 
-import com.yantz.boot.common.enums.LogModuleEnum;
+import com.yantz.boot.common.annotation.Log;
 import com.yantz.boot.common.annotation.RepeatSubmit;
+import com.yantz.boot.common.enums.LogModuleEnum;
 import com.yantz.boot.common.model.Option;
 import com.yantz.boot.common.result.Result;
 import com.yantz.boot.system.model.form.DeptForm;
 import com.yantz.boot.system.model.query.DeptQuery;
 import com.yantz.boot.system.model.vo.DeptVO;
-import com.yantz.boot.common.annotation.Log;
 import com.yantz.boot.system.service.DeptService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
-import io.swagger.v3.oas.annotations.Operation;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
-import jakarta.validation.Valid;
 import java.util.List;
 
 /**

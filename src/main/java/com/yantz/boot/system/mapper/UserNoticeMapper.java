@@ -10,8 +10,6 @@ import com.yantz.boot.system.model.vo.UserNoticePageVO;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-import java.util.List;
-
 /**
  * 用户公告状态Mapper接口
  *

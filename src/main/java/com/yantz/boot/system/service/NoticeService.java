@@ -5,9 +5,9 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import com.yantz.boot.system.model.entity.Notice;
 import com.yantz.boot.system.model.form.NoticeForm;
 import com.yantz.boot.system.model.query.NoticePageQuery;
+import com.yantz.boot.system.model.vo.NoticeDetailVO;
 import com.yantz.boot.system.model.vo.NoticePageVO;
 import com.yantz.boot.system.model.vo.UserNoticePageVO;
-import com.yantz.boot.system.model.vo.NoticeDetailVO;
 
 /**
  * 通知公告服务类

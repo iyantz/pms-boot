@@ -1,6 +1,7 @@
 package com.yantz.boot.common.base;
 
-import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Data;
@@ -26,7 +27,7 @@ public class BaseEntity implements Serializable {
     /**
      * 主键ID
      */
-    @TableId(type = IdType.AUTO)
+
     private Long id;
 
     /**

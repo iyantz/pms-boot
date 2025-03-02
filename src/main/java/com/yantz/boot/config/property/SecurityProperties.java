@@ -3,8 +3,6 @@ package com.yantz.boot.config.property;
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
-import java.util.List;
-
 /**
  * 安全配置属性
  *

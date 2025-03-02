@@ -1,24 +1,22 @@
 package com.yantz.boot.task.service.impl;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import cn.hutool.core.lang.Assert;
+import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.yantz.boot.task.converter.PmsDefectConverter;
 import com.yantz.boot.task.mapper.PmsDefectMapper;
-import com.yantz.boot.task.service.PmsDefectService;
 import com.yantz.boot.task.model.entity.PmsDefect;
 import com.yantz.boot.task.model.form.PmsDefectForm;
 import com.yantz.boot.task.model.query.PmsDefectQuery;
 import com.yantz.boot.task.model.vo.PmsDefectVO;
-import com.yantz.boot.task.converter.PmsDefectConverter;
+import com.yantz.boot.task.service.PmsDefectService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import cn.hutool.core.lang.Assert;
-import cn.hutool.core.util.StrUtil;
 
 /**
  * 缺陷管理服务实现类

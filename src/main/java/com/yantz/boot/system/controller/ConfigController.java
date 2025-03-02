@@ -1,23 +1,23 @@
 package com.yantz.boot.system.controller;
 
 import com.baomidou.mybatisplus.core.metadata.IPage;
+import com.yantz.boot.common.annotation.Log;
 import com.yantz.boot.common.enums.LogModuleEnum;
 import com.yantz.boot.common.result.PageResult;
 import com.yantz.boot.common.result.Result;
-import com.yantz.boot.common.annotation.Log;
 import com.yantz.boot.system.model.form.ConfigForm;
 import com.yantz.boot.system.model.query.ConfigPageQuery;
 import com.yantz.boot.system.model.vo.ConfigVO;
 import com.yantz.boot.system.service.ConfigService;
+import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.extern.slf4j.Slf4j;
 import org.springdoc.core.annotations.ParameterObject;
-import org.springframework.web.bind.annotation.*;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 系统配置前端控制层

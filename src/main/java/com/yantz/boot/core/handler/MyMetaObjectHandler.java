@@ -1,8 +1,10 @@
 package com.yantz.boot.core.handler;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
+import com.yantz.boot.system.service.UserService;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.ibatis.reflection.MetaObject;
-import org.springframework.stereotype.Component;
 
 import java.time.LocalDateTime;
 
@@ -12,8 +14,11 @@ import java.time.LocalDateTime;
  * @author haoxr
  * @since 2022/10/14
  */
-@Component
+@Slf4j
+@RequiredArgsConstructor
 public class MyMetaObjectHandler implements MetaObjectHandler {
+
+    private final UserService userService;
 
     /**
      * 新增填充创建时间
@@ -22,6 +27,10 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
      */
     @Override
     public void insertFill(MetaObject metaObject) {
+//        UserInfoVO currentUserInfo = userService.getCurrentUserInfo();
+//        log.info("start insert fill currentUserInfo:{}", currentUserInfo);
+//        this.strictInsertFill(metaObject, "createBy",Long.class, currentUserInfo.getUserId());
+//        this.strictUpdateFill(metaObject, "updateBy",Long.class, currentUserInfo.getUserId());
         this.strictInsertFill(metaObject, "createTime", LocalDateTime::now, LocalDateTime.class);
         this.strictUpdateFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
     }
@@ -33,6 +42,8 @@ public class MyMetaObjectHandler implements MetaObjectHandler {
      */
     @Override
     public void updateFill(MetaObject metaObject) {
+//        UserInfoVO currentUserInfo = userService.getCurrentUserInfo();
+//        this.strictUpdateFill(metaObject, "updateBy",Long.class, currentUserInfo.getUserId());
         this.strictUpdateFill(metaObject, "updateTime", LocalDateTime::now, LocalDateTime.class);
     }
 

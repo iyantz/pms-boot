@@ -2,7 +2,6 @@ package com.yantz.boot.shared.codegen.model.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableName;
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.yantz.boot.common.base.BaseEntity;
 import com.yantz.boot.shared.codegen.enums.FormTypeEnum;

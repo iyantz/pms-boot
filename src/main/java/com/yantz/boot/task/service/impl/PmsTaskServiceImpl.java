@@ -1,24 +1,22 @@
 package com.yantz.boot.task.service.impl;
 
-import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Service;
+import cn.hutool.core.lang.Assert;
+import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.yantz.boot.task.converter.PmsTaskConverter;
 import com.yantz.boot.task.mapper.PmsTaskMapper;
-import com.yantz.boot.task.service.PmsTaskService;
 import com.yantz.boot.task.model.entity.PmsTask;
 import com.yantz.boot.task.model.form.PmsTaskForm;
 import com.yantz.boot.task.model.query.PmsTaskQuery;
 import com.yantz.boot.task.model.vo.PmsTaskVO;
-import com.yantz.boot.task.converter.PmsTaskConverter;
+import com.yantz.boot.task.service.PmsTaskService;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
-
-import cn.hutool.core.lang.Assert;
-import cn.hutool.core.util.StrUtil;
 
 /**
  * 任务列表服务实现类

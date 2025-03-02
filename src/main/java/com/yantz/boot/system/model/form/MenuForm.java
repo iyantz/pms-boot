@@ -1,7 +1,7 @@
 package com.yantz.boot.system.model.form;
 
-import com.yantz.boot.system.enums.MenuTypeEnum;
 import com.yantz.boot.common.model.KeyValue;
+import com.yantz.boot.system.enums.MenuTypeEnum;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 import org.hibernate.validator.constraints.Range;

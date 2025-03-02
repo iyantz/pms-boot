@@ -1,7 +1,6 @@
 package com.yantz.boot.shared.codegen.model.entity;
 
-import com.baomidou.mybatisplus.annotation.*;
-
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.yantz.boot.common.base.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;

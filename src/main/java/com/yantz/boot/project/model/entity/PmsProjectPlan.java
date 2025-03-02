@@ -1,10 +1,14 @@
 package com.yantz.boot.project.model.entity;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.yantz.boot.common.base.BaseEntity;
 import lombok.Getter;
 import lombok.Setter;
+
 import java.time.LocalDateTime;
-import com.baomidou.mybatisplus.annotation.TableName;
-import com.yantz.boot.common.base.BaseEntity;
 
 /**
  * 项目计划实体对象
@@ -22,6 +26,7 @@ public class PmsProjectPlan extends BaseEntity {
     /**
      * 计划ID
      */
+    @TableId(value = "plan_id", type = IdType.AUTO)
     private Long planId;
     /**
      * 项目ID
@@ -34,10 +39,12 @@ public class PmsProjectPlan extends BaseEntity {
     /**
      * 计划完成时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime planTime;
     /**
      * 实际完成时间
      */
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     private LocalDateTime planActualTime;
     /**
      * 描述
