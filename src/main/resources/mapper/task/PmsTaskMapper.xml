@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yantz.boot.task.mapper.PmsTaskMapper">
+
+    <!-- 获取任务列表分页列表 -->
+    <select id="getPmsTaskPage" resultType="com.yantz.boot.task.model.vo.PmsTaskVO">
+        SELECT
+                task_id,
+                requirement_id,
+                task_name,
+                priority,
+                expect_start_time,
+                expect_finish_time,
+                status,
+                actual_start_time,
+                actual_finish_time,
+                description,
+                create_by,
+                create_time,
+                update_by,
+                update_time,
+                is_deleted
+        FROM
+            pms_task
+        <where>
+        </where>
+    </select>
+
+</mapper>

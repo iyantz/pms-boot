@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: yantz-boot
+  profiles:
+    active: dev
+  config:
+    import: classpath:codegen.yml

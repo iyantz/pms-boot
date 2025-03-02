@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yantz.boot.workorder.mapper.PmsWorkOrderMapper">
+
+    <!-- 获取工单列表分页列表 -->
+    <select id="getPmsWorkOrderPage" resultType="com.yantz.boot.workorder.model.vo.PmsWorkOrderVO">
+        SELECT
+                work_order_id,
+                project_id,
+                requirement_id,
+                title,
+                description,
+                handler_id,
+                handler_time,
+                priority,
+                status,
+                create_by,
+                create_time,
+                update_by,
+                update_time,
+                is_deleted
+        FROM
+            pms_work_order
+        <where>
+        </where>
+    </select>
+
+</mapper>

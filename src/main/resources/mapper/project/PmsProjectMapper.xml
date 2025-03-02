@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yantz.boot.project.mapper.PmsProjectMapper">
+
+    <!-- 获取项目信息分页列表 -->
+    <select id="getPmsProjectPage" resultType="com.yantz.boot.project.model.vo.PmsProjectVO">
+        SELECT
+                project_id,
+                project_name,
+                project_short_name,
+                party_a,
+                party_b,
+                project_period,
+                project_amount,
+                description,
+                remark,
+                create_by,
+                create_time,
+                update_by,
+                update_time,
+                is_deleted
+        FROM
+            pms_project
+        <where>
+        </where>
+    </select>
+
+</mapper>

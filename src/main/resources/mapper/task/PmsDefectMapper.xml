@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yantz.boot.task.mapper.PmsDefectMapper">
+
+    <!-- 获取缺陷管理分页列表 -->
+    <select id="getPmsDefectPage" resultType="com.yantz.boot.task.model.vo.PmsDefectVO">
+        SELECT
+                defect_id,
+                project_id,
+                defect_name,
+                proposer,
+                fixer,
+                propose_time,
+                fix_time,
+                fix_status,
+                priority,
+                defect_type,
+                description,
+                create_by,
+                create_time,
+                update_by,
+                update_time,
+                is_deleted
+        FROM
+            pms_defect
+        <where>
+        </where>
+    </select>
+
+</mapper>
