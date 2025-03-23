@@ -1,154 +1,250 @@
-<div align="center">
-   <img alt="logo" width="100" height="100" src="https://foruda.gitee.com/images/1733417239320800627/3c5290fe_716974.png">
-   <h2>youlai-boot</h2>
-   <img alt="有来技术" src="https://img.shields.io/badge/Java -17-brightgreen.svg"/>
-   <img alt="有来技术" src="https://img.shields.io/badge/SpringBoot-3.3.6-green.svg"/>
-   <a href="https://gitee.com/youlaiorg/youlai-boot" target="_blank">
-     <img alt="有来技术" src="https://gitee.com/youlaiorg/youlai-boot/badge/star.svg"/>
-   </a>     
-   <a href="https://github.com/haoxianrui" target="_blank">
-     <img alt="有来技术" src="https://img.shields.io/github/stars/haoxianrui/youlai-boot.svg?style=social&label=Stars"/>
-   </a>
-   <br/>
-   <img alt="有来技术" src="https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg"/>
-   <a href="https://gitee.com/youlaiorg" target="_blank">
-     <img alt="有来技术" src="https://img.shields.io/badge/Author-有来开源组织-orange.svg"/>
-   </a>
-</div>
+# PMS-Boot 项目管理系统
 
-![](https://raw.gitmirror.com/youlaitech/image/main/docs/rainbow.png)
+基于 Java 17 + Spring Boot 3 + Spring Security 构建的项目开发管理系统。
 
-<div align="center">
-  <a target="_blank" href="https://vue.youlai.tech/">🖥️ 在线预览</a> |  <a target="_blank" href="https://youlai.blog.csdn.net/article/details/145178880">📑 阅读文档</a> 
-</div>
+## 项目介绍
 
-## 📢 项目简介
+PMS-Boot 是一个现代化的项目管理系统，采用最新的技术栈，提供完整的项目管理功能，包括用户管理、权限管理、项目管理、任务管理、工单管理、代码生成等功能。
 
-基于 JDK 17、Spring Boot 3、Spring Security 6、JWT、Redis、Mybatis-Plus、Knife4j、Vue 3、Element-Plus 构建的前后端分离单体权限管理系统。
+## 技术栈
 
-- **🚀 开发框架**: 使用 Spring Boot 3 和 Vue 3，以及 Element-Plus 等主流技术栈，实时更新。
+### 后端技术栈
 
-- **🔐 安全认证**: 结合 Spring Security 和 JWT 提供安全、无状态、分布式友好的身份验证和授权机制。
+- **基础框架**：Spring Boot 3.3.6
+- **安全框架**：Spring Security
+- **持久层框架**：MyBatis Plus 3.5.5
+- **数据库连接池**：Druid 1.2.24
+- **数据库**：MySQL 9.1.0
+- **缓存**：Redis + Caffeine
+- **文档工具**：Knife4j 4.5.0 (基于OpenAPI 3)
+- **对象存储**：MinIO 8.5.10 / 阿里云OSS
+- **工具类库**：Hutool 5.8.34
+- **对象转换**：MapStruct 1.6.3
+- **Excel处理**：EasyExcel 3.2.1
+- **分布式锁**：Redisson 3.40.2
+- **验证码**：Hutool Captcha
+- **邮件服务**：Spring Mail
+- **微信开发**：WxJava 4.5.5.B
 
-- **🔑 权限管理**: 基于 RBAC 模型，实现细粒度的权限控制，涵盖接口方法和按钮级别。
+### 前端技术栈
 
-- **🛠️ 功能模块**: 包括用户管理、角色管理、菜单管理、部门管理、字典管理等多个功能。
+- Vue 3
+- Element Plus
+- TypeScript
 
-## 🌈 项目地址
+## 功能特性
 
-- **在线预览**：[https://vue.youlai.tech](https://vue.youlai.tech)
-- **前端项目**：[vue3-element-admin](https://gitee.com/youlaiorg/vue3-element-admin)
-- **接口文档**：[https://www.apifox.cn/apidoc](https://www.apifox.cn/apidoc/shared-195e783f-4d85-4235-a038-eec696de4ea5)
-- **项目文档**：[youlai-boot 企业级权限管理系统全功能详解](https://youlai.blog.csdn.net/article/details/145178880)
-- **从0到1文档**：[从0到1搭建 youlai-boot 企业级权限管理系统](https://youlai.blog.csdn.net/article/details/145177011)
+1. **用户权限管理**
+   - 用户管理
+   - 角色管理
+   - 菜单管理
+   - 权限控制
 
-## 🚀 项目启动
+2. **项目管理**
+   - 项目创建与配置
+   - 项目成员管理
+   - 项目进度跟踪
+   - 项目文档管理
+
+3. **任务管理**
+   - 任务创建与分配
+   - 任务状态跟踪
+   - 任务优先级管理
+   - 任务评论与附件
+
+4. **工单系统**
+   - 工单创建
+   - 工单处理流程
+   - 工单状态追踪
+   - 工单统计分析
+
+5. **代码生成器**
+   - 自定义模板
+   - 字段配置
+   - 表单配置
+   - 前后端代码生成
+
+6. **系统功能**
+   - 验证码登录
+   - JWT 认证
+   - 邮件通知
+   - 文件上传
+   - 接口文档
+   - 多级缓存
+   - 分布式锁
+
+## 项目结构
+
+```
+pms-boot
+├── src/main/java
+│   └── com.yantz.boot
+│       ├── config           // 配置类
+│       ├── core            // 核心功能
+│       │   ├── filter      // 过滤器
+│       │   ├── security    // 安全相关
+│       │   └── ...
+│       ├── shared          // 共享模块
+│       │   ├── auth        // 认证授权
+│       │   ├── file        // 文件处理
+│       │   └── codegen     // 代码生成
+│       ├── system          // 系统管理
+│       ├── project         // 项目管理
+│       ├── task           // 任务管理
+│       ├── workorder      // 工单管理
+│       └── release        // 发布管理
+├── src/main/resources
+│   ├── mapper             // MyBatis映射文件
+│   ├── templates          // 模板文件
+│   └── application.yml    // 配置文件
+└── pom.xml               // 项目依赖
+```
+
+## 快速开始
+
+### 环境要求
+
+- JDK 17+
+- MySQL 8.0+
+- Redis 6.0+
+- Maven 3.8+
+
+### 开发环境配置
 
 1. **克隆项目**
+```bash
+git clone https://github.com/your-username/pms-boot.git
+```
 
-   ```bash
-   git clone https://gitee.com/youlaiorg/youlai-boot.git
-   ```
-
-2. **数据库初始化**
-
-   执行 [youlai_boot.sql](sql/mysql/youlai_boot.sql) 脚本完成数据库创建、表结构和基础数据的初始化。
+2. **配置数据库**
+- 创建数据库：yantz_boot
+- 导入数据库脚本：sql/yantz_boot.sql
 
 3. **修改配置**
-
-   [application-dev.yml](src/main/resources/application-dev.yml) 修改MySQL、Redis连接配置；
+编辑 `application-dev.yml`，配置数据库连接信息：
+```yaml
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/yantz_boot
+    username: your-username
+    password: your-password
+```
 
 4. **启动项目**
-
-   执行 [YoulaiBootApplication.java](src/main/java/com/youlai/boot/YoulaiBootApplication.java) 的 main 方法完成后端项目启动；
-
-   访问接口文档地址 [http://localhost:8989/doc.html](http://localhost:8989/doc.html) 验证项目启动是否成功。
-
-## 📁 项目目录
-
-```
-youlai-boot
-├── sql                                 # SQL脚本
-│   ├── mysql                           # MySQL 脚本
-├── src                                 # 源码目录
-│   ├── common                          # 公共模块
-│   │   ├── annotation                  # 注解定义
-│   │   ├── base                        # 基础类
-│   │   ├── constant                    # 常量
-│   │   ├── enums                       # 枚举类型
-│   │   ├── exception                   # 异常处理
-│   │   ├── model                       # 数据模型
-│   │   ├── result                      # 结果封装
-│   │   └── util                        # 工具类
-│   ├── config                          # 自动装配配置
-│   │   ├── property                    # 配置属性
-│   │   │   ├── AliyunSmsProperties     # 阿里云短信配置属性
-│   │   │   ├── CaptchaProperties       # 验证码配置属性
-│   │   │   ├── CodegenProperties       # 文件配置属性
-│   │   │   ├── MailProperties          # 邮件配置属性
-│   │   │   ├── SecurityProperties      # 安全配置属性
-│   │   ├── CorsConfig                  # 跨域共享配置
-│   │   ├── MybatisConfig               # Mybatis 自动装配配置
-│   │   ├── RedisCacheConfig            # Redis 缓存自动装配配置
-│   │   ├── RedisConfig                 # Redis 自动装配配置
-│   │   ├── SecurityConfig              # Spring Security 自动装配配置
-│   │   ├── SwaggerConfig               # API 接口文档配置
-│   │   ├── WebMvcConfig                # WebMvc 配置
-│   │   ├── WebSocketConfig             # WebSocket 自动装配配置
-│   │   └── XxlJobConfig                # XXL-JOB 自动装配配置
-│   ├── core                            # 核心功能
-
-│   │   ├── aspect                      # 切面
-│   │   │   ├── LogAspect               # 日志切面
-│   │   │   └── RepeatSubmitAspect      # 防重提交切面
-│   │   ├── filter                      # 过滤器
-│   │   │   ├── RateLimiterFilter       # 限流过滤器
-│   │   │   └── RequestLogFilter        # 请求日志过滤器
-│   │   ├── handler                     # 处理器
-│   │   │   ├── MyDataPermissionHandler # 数据权限处理器
-│   │   │   └── MyMetaObjectHandler     # 元对象字段填充处理器
-│   │   └── security                    # Spring Security 安全模块
-│   ├── modules                         # 业务模块
-│   │   ├── member                      # 会员模块【业务模块演示】
-│   │   ├── order                       # 订单模块【业务模块演示】
-│   │   ├── product                     # 商品模块【业务模块演示】
-│   ├── shared                          # 共享模块
-│   │   ├── auth                        # 认证模块
-│   │   ├── file                        # 文件模块
-│   │   ├── codegen                     # 代码生成模块
-│   │   ├── mail                        # 邮件模块
-│   │   ├── sms                         # 短信模块
-│   │   └── websocket                   # WebSocket 模块
-│   ├── system                          # 系统模块
-│   │   ├── controller                  # 控制层
-│   │   ├── converter                   # MapStruct 转换器
-│   │   ├── event                       # 事件处理
-│   │   ├── handler                     # 处理器
-│   │   ├── listener                    # 监听器
-│   │   ├── model                       # 模型层
-│   │   │   ├── bo                      # 业务对象
-│   │   │   ├── dto                     # 数据传输对象
-│   │   │   ├── entity                  # 实体对象
-│   │   │   ├── form                    # 表单对象
-│   │   │   ├── query                   # 查询参数对象
-│   │   │   └── vo                      # 视图对象
-│   │   ├── mapper                      # 数据库访问层
-│   │   └── service                     # 业务逻辑层
-│   └── YouLaiApplication               # 启动类
-└── end                             
+```bash
+mvn spring-boot:run
 ```
 
-## ✅ 项目统计
+5. **访问接口文档**
+- 访问地址：http://localhost:8989/doc.html
+- 默认账号：admin
+- 默认密码：123456
 
-![Alt](https://repobeats.axiom.co/api/embed/544c5c0b5b3611a6c4d5ef0faa243a9066b89659.svg "Repobeats analytics image")
+### 生产环境部署
 
-Thanks to all the contributors!
+1. **打包**
+```bash
+mvn clean package
+```
 
-[![contributors](https://contrib.rocks/image?repo=haoxianrui/youlai-boot)](https://github.com/haoxianrui/youlai-boot/graphs/contributors)
+2. **运行**
+```bash
+java -jar yantz-boot.jar --spring.profiles.active=prod
+```
 
-## 💖 加交流群
+## 开发指南
 
-> 关注公众号 有来技术 ，点击菜单 交流群 获取加群二维码。
+### 代码生成
 
-![](https://foruda.gitee.com/images/1737108820762592766/3390ed0d_716974.png)
+1. 配置代码生成模板 (`codegen.yml`)
+```yaml
+codegen:
+  defaultConfig:
+    author: your-name
+    moduleName: your-module
+```
+
+2. 使用代码生成器生成代码
+- 访问代码生成器页面
+- 选择数据表
+- 配置生成选项
+- 点击生成代码
+
+### 新增功能模块
+
+1. 创建实体类
+2. 创建Mapper接口和XML
+3. 创建Service接口和实现类
+4. 创建Controller
+5. 配置权限和菜单
+
+## 项目特点
+
+1. **现代化技术栈**
+   - 采用 Java 17 新特性
+   - 使用 Spring Boot 3 最新版本
+   - 支持响应式编程
+
+2. **安全性**
+   - 基于 JWT 的认证
+   - 细粒度的权限控制
+   - 防止 XSS 攻击
+   - 支持验证码登录
+
+3. **高性能**
+   - 多级缓存设计
+   - 数据库连接池优化
+   - 异步处理机制
+
+4. **可扩展性**
+   - 模块化设计
+   - 插件化架构
+   - 支持自定义开发
+
+5. **开发效率**
+   - 强大的代码生成器
+   - 丰富的工具类库
+   - 完善的开发文档
+
+## 常见问题
+
+1. **验证码无法显示**
+   - 检查验证码配置是否正确
+   - 确认Redis服务是否正常运行
+
+2. **文件上传失败**
+   - 检查存储服务配置
+   - 确认文件大小是否超过限制
+
+3. **接口访问异常**
+   - 检查token是否过期
+   - 确认是否有相应的访问权限
+
+## 贡献指南
+
+1. Fork 项目
+2. 创建功能分支
+3. 提交代码
+4. 创建 Pull Request
+
+## 版本历史
+
+- v1.0.0 - 2024.03
+  - 项目初始化
+  - 基础功能实现
+  - 核心模块开发
+
+## 许可证
+
+[MIT License](LICENSE)
+
+## 联系方式
+
+- 作者：Ray.Hao
+- 邮箱：your-email@example.com
+- 项目地址：https://github.com/your-username/pms-boot
+
+## 致谢
+
+感谢所有为这个项目做出贡献的开发者！
 

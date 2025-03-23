@@ -152,6 +152,7 @@ springdoc:
         - com.yantz.boot.report.controller
         - com.yantz.boot.task.controller
         - com.yantz.boot.workorder.controller
+        - com.yantz.boot.release.controller
   default-flat-param-object: true
 
 # knife4j 接口文档配置
